@@ -1,0 +1,23 @@
+This section contains the essential data files required for model application, as well as intermediary outputs generated during the operational processes. These resources facilitate user-driven prediction analysis and result interpretation. Detailed descriptions are as follows:
+
+1. Application Layer Data
+The following data files are provided to support the model application layer:
+
+CHP_Encoder: Encodes Traditional Chinese Medicine (TCM) components to support model input processing.
+CHP_Medicinal_properties: Contains medicinal property data for TCM, which informs model-based analysis and prediction.
+Test_input: This file serves as the test input dataset. Users may modify this data to suit their own prediction and analysis needs.
+Note: Training data files are not currently provided. The following files are therefore not included:
+
+all_hypergraphs_with_labels-train.pkl
+all_graphs_with_labels-train.pt
+2. Operational Layer Data
+Intermediary files generated during the model's operation document the output and relevant attention mechanisms, assisting users in analyzing and interpreting prediction processes:
+
+prediction_outputs: Logs the model’s prediction outputs for further analysis.
+attention_weights: Contains the distribution of attention weights, allowing insights into which features are emphasized by the model.
+attention_averages: Records averaged attention weights, simplifying feature analysis.
+calculated_attention_weights: Contains processed attention weight data to quantify the interactions and relationships among medicinal herbs within a prescription.
+3. Additional Data Resources
+For more comprehensive details on the dataset, please refer to the complete Traditional Chinese Medicine Multidimensional Knowledge Graph (TCM-MKG) dataset available at:
+
+Zeng, Jingqi (2024). Traditional Chinese Medicine Multidimensional Knowledge Graph (V1.0) [Data set]. https://doi.org/10.5281/zenodo.13763953
