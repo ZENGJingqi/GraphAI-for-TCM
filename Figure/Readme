@@ -1,15 +1,1 @@
-### Figure: Research Framework for Analyzing Compatibility Mechanisms in Traditional Chinese Medicine (TCM) Using Graph Neural Networks
-
-This figure presents a research framework based on Graph Neural Networks (GNN) for exploring the compatibility mechanisms in Traditional Chinese Medicine (TCM). The workflow includes four primary components:
-
-1. **Construction of a Multi-dimensional Knowledge Graph for TCM**  
-   The first step involves constructing a multi-dimensional knowledge graph by integrating data from various sources (e.g., TCMSP, HERB, BindingDB). This knowledge graph includes multiple aspects of TCM, such as diseases, targets, chemical components, and terminology. It provides a structured foundation for the subsequent GNN model.
-
-2. **Feature Engineering and Embedding for TCM Terminology**  
-   Through feature engineering, attribute and relational features of Chinese herbal pieces (CHP) are extracted and embedded. These features include both attribute features (such as therapeutic properties, medicinal flavor, and meridian tropism) and relational features (such as compatibility relationships between herbs). This step generates feature vectors, forming the basis for feature learning and representation in the model.
-
-3. **Incorporation of Medicinal Properties as Virtual Nodes for TCM Graph Encoding**  
-   To capture the unique properties of TCM formulas, medicinal properties (e.g., therapeutic nature, medicinal flavor, meridian tropism) are incorporated as virtual nodes in the GNN. Using a multi-layer attention propagation mechanism, the complex relationships between different herbs are modeled, leading to a robust graph-based representation of TCM formulas.
-
-4. **Quantitative Evaluation of Herb Compatibility via Node Attention Weights**  
-   Finally, node attention weights are used to quantitatively evaluate the compatibility mechanisms of herbs within TCM formulas. The attention weight matrix displayed in the figure shows the compatibility relationships among different herbs in the "Huashi Baidu Decoction," helping to identify which herb pairs have stronger compatibility and providing insights into the underlying principles of the formula.
+Figure: Research Framework for Analyzing Compatibility Mechanisms in Traditional Chinese Medicine (TCM) Using Graph Neural Networks
