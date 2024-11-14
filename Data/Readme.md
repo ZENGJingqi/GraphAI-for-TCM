@@ -23,6 +23,7 @@ This section contains the essential data files required for model application, a
 3. **Additional Data Resources**  
    For more comprehensive details on the dataset, please refer to the complete Traditional Chinese Medicine Multidimensional Knowledge Graph (TCM-MKG) dataset available at:
 
-   **Zeng, Jingqi (2024). Traditional Chinese Medicine Multidimensional Knowledge Graph (V1.0) [Data set].**  
+   **Zeng, J., & Jia, X. (2024). Traditional Chinese Medicine Multidimensional Knowledge Graph (V1.0) [Data set]. **  
    China Pharmaceutical University.  
    [https://doi.org/10.5281/zenodo.13763953](https://doi.org/10.5281/zenodo.13763953)
+
