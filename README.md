@@ -10,9 +10,9 @@
 
 **GraphAI-for-TCM** complements the **Traditional Chinese Medicine Multi-dimensional Knowledge Graph (TCM-MKG)** project, forming a cohesive system designed to facilitate the quantitative evaluation of compatibility mechanisms within Traditional Chinese Medicine (TCM). The code and models provided here are part of my study titled:
 
-> **"Graph Artificial Intelligence for Quantifying Compatibility Mechanisms in Traditional Chinese Medicine"**
+> **"Graph Neural Networks for Quantifying Compatibility Mechanisms in Traditional Chinese Medicine"**
 
-**Zeng, J., & Jia, X. (2024). Graph Artificial Intelligence for Quantifying Compatibility Mechanisms in Traditional Chinese Medicine. ArXiv.**  
+**Zeng, J., & Jia, X. (2024). Graph Neural Networks for Quantifying Compatibility Mechanisms in Traditional Chinese Medicine. ArXiv. **  
 Available at: [https://arxiv.org/abs/2411.11474](https://arxiv.org/abs/2411.11474)
 
 In this study, graph-based artificial intelligence techniques are employed, focusing specifically on graph attention mechanisms to analyze and interpret the intricate compatibility relationships within TCM formulations. This repository includes pre-trained models, data processing scripts, and example workflows, empowering users to conduct advanced TCM compatibility studies.
