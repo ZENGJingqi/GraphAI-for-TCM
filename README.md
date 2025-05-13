@@ -12,8 +12,8 @@
 
 > **"Graph Neural Networks for Quantifying Compatibility Mechanisms in Traditional Chinese Medicine"**
 
-**Zeng, J., & Jia, X. (2024). Graph Neural Networks for Quantifying Compatibility Mechanisms in Traditional Chinese Medicine. ArXiv.**  
-Available at: [https://arxiv.org/abs/2411.11474](https://arxiv.org/abs/2411.11474)
+**Zeng, J., & Jia, X. (2025). Quantifying compatibility mechanisms in traditional Chinese medicine with interpretable graph neural networks. Journal of Pharmaceutical Analysis, 101342.**  
+Available at: [https://doi.org/10.1016/j.jpha.2025.101342)
 
 In this study, graph-based artificial intelligence techniques are employed, focusing specifically on graph attention mechanisms to analyze and interpret the intricate compatibility relationships within TCM formulations. This repository includes pre-trained models, data processing scripts, and example workflows, empowering users to conduct advanced TCM compatibility studies.
 
@@ -63,11 +63,7 @@ The figure below illustrates the research framework using Graph Neural Networks 
 
 ## **Citation**
 
-If you find this repository or the TCM-MKG dataset useful for your research, please cite:
-
-**Zeng, J., & Jia, X. (2024). Traditional Chinese Medicine Multidimensional Knowledge Graph (V1.0) [Data set].**  
-China Pharmaceutical University. 
-[https://doi.org/10.5281/zenodo.13763953](https://doi.org/10.5281/zenodo.13763953)
+Zeng, J., & Jia, X. (2025). Quantifying compatibility mechanisms in traditional Chinese medicine with interpretable graph neural networks. Journal of Pharmaceutical Analysis, 101342. https://doi.org/10.1016/j.jpha.2025.101342
 
 ---
 
