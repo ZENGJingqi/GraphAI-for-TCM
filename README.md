@@ -6,6 +6,18 @@
 
 ---
 
+### Recommended Environment
+- Python 3.10+
+- PyTorch 2.7.1 (tested with CPU version; GPU version also compatible)
+- Torch Geometric 2.6.1
+- Scikit-learn 1.7.0
+- Numpy 2.3.0
+- Pandas 2.3.0
+- Scipy 1.15.3
+- Matplotlib 3.10.3
+- tqdm 4.67.1
+
+
 ## **Overview**
 
 **GraphAI-for-TCM** complements the **Traditional Chinese Medicine Multi-dimensional Knowledge Graph (TCM-MKG)** project, forming a cohesive system designed to facilitate the quantitative evaluation of compatibility mechanisms within Traditional Chinese Medicine (TCM). The code and models provided here are part of my study titled:
