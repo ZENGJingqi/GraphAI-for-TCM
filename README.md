@@ -68,7 +68,7 @@ The associated publication reports that the broader TCM-MKG-driven framework was
   - `Hypergraph Neural Network.ipynb`
   - `Transforming Graph Encoding to Hypergraph Encoding.ipynb`
 
-Detailed data descriptions are provided in `Data/Readme.md` and `Data/Data_dictionary.md`.
+Detailed data descriptions are provided in `Data/Readme.md` and `Data/Data_dictionary.md`. Setup and runtime troubleshooting notes are collected in `TROUBLESHOOTING.md`.
 
 ---
 
@@ -89,6 +89,13 @@ On Windows PowerShell, activate the environment with:
 
 ```powershell
 .venv\Scripts\Activate.ps1
+```
+
+For Conda users, an alternative setup file is also provided:
+
+```bash
+conda env create -f environment.yml
+conda activate graphai-for-tcm
 ```
 
 Then launch Jupyter from the repository root and open the notebooks in the `Python` directory:
@@ -154,6 +161,8 @@ This repository now includes the two training assets that were previously absent
 Their inclusion improves reproducibility for users who want to inspect or extend the training workflow rather than only run pretrained inference. The broader biomedical knowledge resource used to support this work remains available through the public TCM-MKG Zenodo record linked above.
 
 The hypergraph training file is consumed by `Python/Hypergraph Neural Network.ipynb` through `torch.load(...)`. Users working with this file outside the notebook should ensure that the required hypergraph-related Python dependencies used by that notebook are available in their environment.
+
+For common installation and notebook execution issues, see `TROUBLESHOOTING.md`.
 
 ---
 

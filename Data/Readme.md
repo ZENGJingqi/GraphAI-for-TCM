@@ -28,6 +28,8 @@ The repository now includes the training data files required for graph- and hype
 
 These files were added to improve the reproducibility of the published workflow and to support users who want to inspect or extend model training.
 
+Because these files are substantially larger than the lightweight example outputs, users should make sure their local clone finished downloading correctly before running training-oriented notebooks.
+
 ## 3. Generated outputs for interpretation
 
 - `prediction_outputs.tsv`  

@@ -55,3 +55,5 @@ The notebooks assume repository-relative paths and are intended to be run from i
 - The released hypergraph training workflow uses serialized hypergraph objects loaded through PyTorch and may require additional hypergraph-related dependencies in the Python environment.
 - The pretrained inference path is centered on the GAT model because it offers an interpretable attention mechanism that aligns well with the compatibility-analysis goal of the project.
 - The repository root provides `requirements.txt` for environment setup before running the notebooks.
+- Conda users can use `environment.yml` from the repository root.
+- Common execution issues are summarized in `TROUBLESHOOTING.md`.
