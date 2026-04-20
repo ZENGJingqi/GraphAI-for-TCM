@@ -74,6 +74,29 @@ Detailed data descriptions are provided in `Data/Readme.md` and `Data/Data_dicti
 
 ## Quick Start
 
+### 0. Create the environment
+
+The repository is notebook-driven. A typical setup sequence is:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+On Windows PowerShell, activate the environment with:
+
+```powershell
+.venv\Scripts\Activate.ps1
+```
+
+Then launch Jupyter from the repository root and open the notebooks in the `Python` directory:
+
+```bash
+jupyter notebook
+```
+
 For most users, the recommended inference workflow is the three-notebook GAT pipeline in the `Python` directory:
 
 1. **Prepare formula input**  
@@ -145,8 +168,14 @@ The hypergraph training file is consumed by `Python/Hypergraph Neural Network.ip
 - SciPy 1.15.3
 - matplotlib 3.10.3
 - tqdm 4.67.1
+- networkx 3.x
+- hypernetx 2.x
+- openpyxl 3.x
+- notebook 7.x
 
 CPU execution has been tested for the current workflow; a compatible GPU-enabled PyTorch environment can also be used.
+
+If your local platform requires a custom PyTorch or PyTorch Geometric installation route, install those packages first according to the official instructions for your platform, then install the remaining packages from `requirements.txt`.
 
 ---
 

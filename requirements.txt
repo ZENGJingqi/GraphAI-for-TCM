@@ -1,0 +1,20 @@
+# Core scientific stack
+numpy==2.3.0
+pandas==2.3.0
+scipy==1.15.3
+scikit-learn==1.7.0
+matplotlib==3.10.3
+tqdm==4.67.1
+
+# Graph and hypergraph workflow
+networkx>=3.3,<4
+hypernetx>=2.4,<3
+
+# Deep learning
+torch==2.7.1
+torch-geometric==2.6.1
+
+# Notebook and spreadsheet IO
+notebook>=7,<8
+ipykernel>=6,<7
+openpyxl>=3.1,<4
