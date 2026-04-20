@@ -1,5 +1,20 @@
-The Model folder houses a single, but essential, file for the implementation of graph-based machine learning in the context of Traditional Chinese Medicine (TCM) compatibility analysis:
+The `Model` directory contains the released pretrained model used in the public inference workflow.
 
-gat_model.pth: This file contains the pretrained weights for a Graph Attention Network (GAT) model, a sophisticated neural network architecture designed specifically to handle graph-structured data. The GAT model leverages attention mechanisms to dynamically assign weights to neighboring nodes in a graph, allowing the model to focus on the most relevant relationships for a given task. By adjusting these weights, the GAT model identifies key interactions and dependencies among nodes, which is particularly beneficial for domains like TCM, where the relationships between components (such as medicinal herbs) are complex and multi-faceted.
+## `gat_model.pth`
 
-The gat_model.pth file serves as the core of the analytical capability in this repository, offering a pretrained model that can be directly applied to prediction tasks or further fine-tuned to suit specific research objectives. This model is designed to interpret and quantify the intricate compatibility mechanisms within TCM, such as synergistic effects and contraindications among medicinal components. It supports both node and edge attribute integration, which allows it to capture and analyze the nuanced, multi-dimensional relationships present in TCM data.
+This file stores the pretrained weights for the Graph Attention Network (GAT) used by:
+
+- `Python/2_Prediction Using the GAT Model.ipynb`
+
+The model is designed for graph-structured TCM formula data and works together with graph objects generated from:
+
+- herb-level encoded features in `Data/CHP_Encoder.tsv`
+- medicinal-property relations in `Data/CHP_Medicinal_properties.tsv`
+- custom formula input in `Data/Test_input.xlsx`
+
+In the released workflow, the model produces:
+
+- a 5-dimensional output vector per formula
+- attention weights that can be exported and interpreted downstream
+
+This pretrained file is intended for direct inference and workflow demonstration. Users interested in retraining or comparing architectures should refer to the notebooks in the `Python` directory that use the released training datasets in `Data`.

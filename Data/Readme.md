@@ -1,5 +1,7 @@
 This directory contains the core data assets required for model execution, result interpretation, and reproducible experimentation in **GraphAI-for-TCM**.
 
+For column-level descriptions and workflow-specific details, see `Data/Data_dictionary.md`.
+
 ## 1. Core input resources
 
 - `CHP_Encoder.tsv`  

@@ -1,33 +1,56 @@
 # Python Folder Overview
 
-The **Python** folder contains a collection of Jupyter notebooks with code implementations essential for executing model predictions and exploring different approaches for Traditional Chinese Medicine (TCM) compatibility analysis. This directory allows users to directly interact with data from the **Data** folder and model weights from the **Model** folder. Below is a detailed description of the contents and their usage.
+The **Python** directory contains the notebook-based workflow for graph construction, pretrained inference, interpretation, and training experiments in **GraphAI-for-TCM**.
 
-## Key Notebooks for Prediction
+## Recommended notebook order
 
-The following notebooks are optimized for making compatibility predictions using the preselected **Graph Attention Network (GAT)** model. Users primarily need to interact with these three notebooks for prediction tasks:
+For most users, the intended sequence is:
 
-- **1_Graph Embedding in TCM Formulas.ipynb**: Handles the embedding of TCM formulas into graph structures, transforming traditional data into a format suitable for graph-based analysis.
+1. **`1_Graph Embedding in TCM Formulas.ipynb`**  
+   Reads `../Data/Test_input.xlsx`, `../Data/CHP_Encoder.tsv`, and `../Data/CHP_Medicinal_properties.tsv`, then exports `../Data/all_graphs_to_be_predicted.pt`.
 
-- **2_Prediction Using the GAT Model.ipynb**: Enables users to perform predictions using the pretrained GAT model, leveraging its attention-based architecture to analyze and interpret compatibility within TCM formulations.
+2. **`2_Prediction Using the GAT Model.ipynb`**  
+   Loads `../Data/all_graphs_to_be_predicted.pt` and `../Model/gat_model.pth`, then exports:
+   - `../Data/prediction_outputs.tsv`
+   - `../Data/attention_weights.tsv`
 
-- **3_Quantitative Evaluation of Compatibility Mechanisms Using the GAT Model.ipynb**: Focuses on the quantitative evaluation of compatibility mechanisms identified by the GAT model, providing insights into the model's predictions and the inferred compatibility relationships among TCM ingredients.
+3. **`3_Quantitative Evaluation of Compatibility Mechanisms Using the GAT Model.ipynb`**  
+   Consumes the attention outputs and produces:
+   - `../Data/attention_averages.tsv`
+   - `../Data/calculated_attention_weights.tsv`
+   - formula-specific figures in `../Figure`
 
-These three notebooks form the core prediction workflow, allowing users to effectively utilize the GAT model for compatibility analysis without needing to explore additional configurations or models.
+These three notebooks form the main public inference workflow for custom formula analysis.
 
-## Additional Exploration Notebooks
+## Training and comparison notebooks
 
-The remaining notebooks showcase alternative approaches and experimental methods for compatibility analysis, highlighting the development and evaluation of various model architectures. While these notebooks are supplementary to the primary prediction process, they offer valuable insights into model experimentation and comparative analysis:
+The remaining notebooks are primarily for model development, benchmarking, or representation experiments:
 
-- **Graph Attention Network.ipynb**: A detailed implementation of the GAT architecture, focusing on its construction and parameter tuning for compatibility prediction.
+- **`Graph Attention Network.ipynb`**  
+  Uses `../Data/all_graphs_with_labels-train.pt` for graph-based model training and evaluation.
 
-- **Graph Transformer Network.ipynb**: Explores the application of a Graph Transformer Network, an alternative graph-based model that emphasizes different aspects of node and edge interactions within TCM data.
+- **`Graph Transformer Network.ipynb`**  
+  Uses `../Data/all_graphs_with_labels-train.pt` for transformer-style graph experiments.
 
-- **Hypergraph Neural Network.ipynb**: Investigates the use of a Hypergraph Neural Network, which represents multi-node relationships in a hypergraph structure, capturing more complex interactions between TCM components.
+- **`Hypergraph Neural Network.ipynb`**  
+  Uses `../Data/all_hypergraphs_with_labels-train.pkl` for hypergraph neural network experiments.
 
-- **Transforming Graph Encoding to Hypergraph Encoding.ipynb**: Demonstrates the process of transforming graph-structured data into a hypergraph format, exploring the potential benefits of hypergraph representation for TCM compatibility analysis.
+- **`Transforming Graph Encoding to Hypergraph Encoding.ipynb`**  
+  Converts graph-formatted prediction inputs into hypergraph-formatted objects for downstream hypergraph workflows.
 
-## Model Selection Rationale
+## Input and output expectations
 
-While the **Python** folder includes various model implementations, the **Graph Attention Network (GAT)** model has been selected as the optimal choice based on performance metrics and interpretability for TCM compatibility tasks. The GAT model’s attention mechanism aligns well with the goal of identifying key component interactions in TCM formulas, providing both quantitative and qualitative insights.
+Users preparing custom prediction input should keep the schema of `../Data/Test_input.xlsx` unchanged:
 
-This structure allows users to leverage the GAT model efficiently for compatibility predictions while also providing a foundation for exploring and developing alternative approaches.
+- `CPM_ID`
+- `CHP_ID`
+- `Dosage_ratio`
+- `Chinese_herbal_pieces`
+
+The notebooks assume repository-relative paths and are intended to be run from inside the `Python` directory.
+
+## Practical notes
+
+- The released graph training data are PyTorch Geometric graph objects.
+- The released hypergraph training workflow uses serialized hypergraph objects loaded through PyTorch and may require additional hypergraph-related dependencies in the Python environment.
+- The pretrained inference path is centered on the GAT model because it offers an interpretable attention mechanism that aligns well with the compatibility-analysis goal of the project.

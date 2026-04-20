@@ -68,6 +68,57 @@ The associated publication reports that the broader TCM-MKG-driven framework was
   - `Hypergraph Neural Network.ipynb`
   - `Transforming Graph Encoding to Hypergraph Encoding.ipynb`
 
+Detailed data descriptions are provided in `Data/Readme.md` and `Data/Data_dictionary.md`.
+
+---
+
+## Quick Start
+
+For most users, the recommended inference workflow is the three-notebook GAT pipeline in the `Python` directory:
+
+1. **Prepare formula input**  
+   Edit `Data/Test_input.xlsx` or replace it with a file of the same schema containing the columns:
+   - `CPM_ID`
+   - `CHP_ID`
+   - `Dosage_ratio`
+   - `Chinese_herbal_pieces`
+
+2. **Build graph representations**  
+   Run `Python/1_Graph Embedding in TCM Formulas.ipynb` to convert formula records into `Data/all_graphs_to_be_predicted.pt`.
+
+3. **Run the pretrained GAT model**  
+   Run `Python/2_Prediction Using the GAT Model.ipynb` to load `Model/gat_model.pth` and export:
+   - `Data/prediction_outputs.tsv`
+   - `Data/attention_weights.tsv`
+
+4. **Interpret compatibility mechanisms**  
+   Run `Python/3_Quantitative Evaluation of Compatibility Mechanisms Using the GAT Model.ipynb` to generate:
+   - `Data/attention_averages.tsv`
+   - `Data/calculated_attention_weights.tsv`
+   - formula-specific heatmap figures in `Figure`
+
+For users interested in model development rather than inference only, the training-oriented notebooks use:
+
+- `Data/all_graphs_with_labels-train.pt` for graph-based experiments
+- `Data/all_hypergraphs_with_labels-train.pkl` for hypergraph-based experiments
+
+---
+
+## Data at a Glance
+
+The repository contains three data layers:
+
+1. **Reference tables**  
+   `CHP_Encoder.tsv`, `CHP_Medicinal_properties.tsv`, and `Chinese_herbal_pieces.tsv` provide encoded herb features, medicinal-property annotations, and herb identifier mappings.
+
+2. **User-facing input and generated inference files**  
+   `Test_input.xlsx` is the editable entry point for custom formula prediction, while `all_graphs_to_be_predicted.pt`, `prediction_outputs.tsv`, and the attention TSV files capture downstream machine-learning results.
+
+3. **Reproducibility assets**  
+   `all_graphs_with_labels-train.pt` and `all_hypergraphs_with_labels-train.pkl` support graph and hypergraph training workflows corresponding to the public project release.
+
+The graph training file contains 6,080 labeled graph samples. Each sample is a `torch_geometric.data.Data` object with node features (`x`), edge indices (`edge_index`), edge attributes (`edge_attr`), a 5-dimensional label vector (`y`), and metadata such as `cpm_id` and node names. The graph node feature matrix uses 91 features per node in the released training set.
+
 ---
 
 ## Data Availability and Reproducibility
@@ -78,6 +129,8 @@ This repository now includes the two training assets that were previously absent
 - `Data/all_hypergraphs_with_labels-train.pkl`
 
 Their inclusion improves reproducibility for users who want to inspect or extend the training workflow rather than only run pretrained inference. The broader biomedical knowledge resource used to support this work remains available through the public TCM-MKG Zenodo record linked above.
+
+The hypergraph training file is consumed by `Python/Hypergraph Neural Network.ipynb` through `torch.load(...)`. Users working with this file outside the notebook should ensure that the required hypergraph-related Python dependencies used by that notebook are available in their environment.
 
 ---
 
