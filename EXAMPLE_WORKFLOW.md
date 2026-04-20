@@ -81,9 +81,12 @@ In the current released example run:
 
 These files correspond to the same 215 example formula IDs.
 
-The bundled example figure currently corresponds to:
+The bundled example figures currently correspond to:
 
 - `Figure/COVID00001_Attention_Heatmap.pdf`
+- `Figure/COVID00001_Attention_Heatmap.png`
+
+The PNG version is especially convenient for direct preview on GitHub, while the PDF version is suitable for high-resolution export.
 
 ## Interpreting the bundled outputs
 

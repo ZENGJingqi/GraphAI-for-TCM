@@ -18,7 +18,7 @@ For most users, the intended sequence is:
    Consumes the attention outputs and produces:
    - `../Data/attention_averages.tsv`
    - `../Data/calculated_attention_weights.tsv`
-   - formula-specific figures in `../Figure`
+   - formula-specific figures in `../Figure`, including export-ready heatmaps
 
 The released repository also includes example outputs generated from this three-step workflow; see `EXAMPLE_WORKFLOW.md`.
 

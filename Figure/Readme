@@ -1,1 +1,5 @@
-Figure: Research Framework for Analyzing Compatibility Mechanisms in Traditional Chinese Medicine (TCM) Using Graph Neural Networks
+This directory contains figure assets used by or generated from the repository workflow.
+
+- `Graphic_abstract.png`: research framework overview figure shown in the main README
+- `COVID00001_Attention_Heatmap.pdf`: export-quality example herb-herb attention heatmap
+- `COVID00001_Attention_Heatmap.png`: preview-friendly version of the same example heatmap for direct GitHub browsing

@@ -44,9 +44,10 @@ Because these files are substantially larger than the lightweight example output
 - `calculated_attention_weights.tsv`  
   Processed attention-weight results used to quantify herb-herb interaction patterns within formulae.
 
-The repository also includes a released example figure generated from the interpretation workflow:
+The repository also includes released example figures generated from the interpretation workflow:
 
 - `Figure/COVID00001_Attention_Heatmap.pdf`
+- `Figure/COVID00001_Attention_Heatmap.png`
 
 ## 4. Related data resource
 
