@@ -68,7 +68,7 @@ The associated publication reports that the broader TCM-MKG-driven framework was
   - `Hypergraph Neural Network.ipynb`
   - `Transforming Graph Encoding to Hypergraph Encoding.ipynb`
 
-Detailed data descriptions are provided in `Data/Readme.md` and `Data/Data_dictionary.md`. Setup and runtime troubleshooting notes are collected in `TROUBLESHOOTING.md`.
+Detailed data descriptions are provided in `Data/Readme.md` and `Data/Data_dictionary.md`. A released end-to-end example is summarized in `EXAMPLE_WORKFLOW.md`, and setup/runtime troubleshooting notes are collected in `TROUBLESHOOTING.md`.
 
 ---
 
@@ -126,6 +126,8 @@ For most users, the recommended inference workflow is the three-notebook GAT pip
    - `Data/attention_averages.tsv`
    - `Data/calculated_attention_weights.tsv`
    - formula-specific heatmap figures in `Figure`
+
+The currently bundled example outputs in `Data` were regenerated from the released `Data/Test_input.xlsx` workflow and are described in `EXAMPLE_WORKFLOW.md`.
 
 For users interested in model development rather than inference only, the training-oriented notebooks use:
 

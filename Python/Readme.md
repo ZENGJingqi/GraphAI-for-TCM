@@ -20,6 +20,8 @@ For most users, the intended sequence is:
    - `../Data/calculated_attention_weights.tsv`
    - formula-specific figures in `../Figure`
 
+The released repository also includes example outputs generated from this three-step workflow; see `EXAMPLE_WORKFLOW.md`.
+
 These three notebooks form the main public inference workflow for custom formula analysis.
 
 ## Training and comparison notebooks

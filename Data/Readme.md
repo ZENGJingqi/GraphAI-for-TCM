@@ -33,7 +33,7 @@ Because these files are substantially larger than the lightweight example output
 ## 3. Generated outputs for interpretation
 
 - `prediction_outputs.tsv`  
-  Example model prediction outputs.
+  Example model prediction outputs regenerated from the released `Test_input.xlsx` workflow.
 
 - `attention_weights.tsv`  
   Attention-weight results for detailed inspection of model emphasis patterns.
@@ -43,6 +43,10 @@ Because these files are substantially larger than the lightweight example output
 
 - `calculated_attention_weights.tsv`  
   Processed attention-weight results used to quantify herb-herb interaction patterns within formulae.
+
+The repository also includes a released example figure generated from the interpretation workflow:
+
+- `Figure/MPX_Attention_Heatmap.pdf`
 
 ## 4. Related data resource
 
