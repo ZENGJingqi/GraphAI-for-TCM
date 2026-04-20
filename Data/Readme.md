@@ -46,7 +46,7 @@ Because these files are substantially larger than the lightweight example output
 
 The repository also includes a released example figure generated from the interpretation workflow:
 
-- `Figure/MPX_Attention_Heatmap.pdf`
+- `Figure/COVID00001_Attention_Heatmap.pdf`
 
 ## 4. Related data resource
 

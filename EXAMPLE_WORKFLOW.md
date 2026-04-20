@@ -81,6 +81,10 @@ In the current released example run:
 
 These files correspond to the same 215 example formula IDs.
 
+The bundled example figure currently corresponds to:
+
+- `Figure/COVID00001_Attention_Heatmap.pdf`
+
 ## Interpreting the bundled outputs
 
 ### `prediction_outputs.tsv`
