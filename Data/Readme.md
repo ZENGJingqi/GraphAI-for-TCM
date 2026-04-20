@@ -1,29 +1,48 @@
-This section contains the essential data files required for model application, as well as intermediary outputs generated during the operational processes. These resources facilitate user-driven prediction analysis and result interpretation. Detailed descriptions are as follows:
+This directory contains the core data assets required for model execution, result interpretation, and reproducible experimentation in **GraphAI-for-TCM**.
 
-1. **Application Layer Data**  
-   The following data files support the model's application layer:
+## 1. Core input resources
 
-   - **CHP_Encoder**: Encodes Traditional Chinese Medicine (TCM) components, providing structured input for model processing.
-   - **CHP_Medicinal_properties**: Contains medicinal property data for TCM, informing model-based analysis and prediction.
-   - **Chinese_herbal_pieces**: This file records essential information about Chinese herbal pieces, with a focus on the `CHP_ID` codes associated with each herbal piece. This coding system is particularly valuable for users constructing and interpreting custom prescription data, enabling precise identification and analysis of specific herbs within TCM formulations.
-   - **Test_input**: This file serves as an example input dataset. Users may modify this data to suit their own prediction and analysis needs.
+- `CHP_Encoder.tsv`  
+  Encoded descriptors for Chinese herbal pieces used as structured model inputs.
 
-   **Note**: Training data files are not provided in this repository. The following files are therefore not included:
-   - `all_hypergraphs_with_labels-train.pkl`
-   - `all_graphs_with_labels-train.pt`
+- `CHP_Medicinal_properties.tsv`  
+  Medicinal-property annotations, including TCM semantic information used during graph encoding.
 
-2. **Operational Layer Data**  
-   Intermediary files generated during the model's operation document the output and relevant attention mechanisms, assisting users in analyzing and interpreting prediction processes:
+- `Chinese_herbal_pieces.tsv`  
+  Reference table for Chinese herbal piece identifiers (`CHP_ID`) and herb names. This file is useful when constructing custom formula inputs and mapping model outputs back to interpretable herb entities.
 
-   - **prediction_outputs**: Logs the model’s prediction outputs for further analysis.
-   - **attention_weights**: Contains the distribution of attention weights, allowing insights into which features are emphasized by the model.
-   - **attention_averages**: Records averaged attention weights, simplifying feature analysis.
-   - **calculated_attention_weights**: Contains processed attention weight data to quantify the interactions and relationships among medicinal herbs within a prescription.
+- `Test_input.xlsx`  
+  Example input file for prediction-oriented workflows.
 
-3. **Additional Data Resources**  
-   For more comprehensive details on the dataset, please refer to the complete Traditional Chinese Medicine Multidimensional Knowledge Graph (TCM-MKG) dataset available at:
+## 2. Training assets
 
-   **Zeng, J., & Jia, X. (2024). Traditional Chinese Medicine Multidimensional Knowledge Graph (V1.0) [Data set]. **  
-   China Pharmaceutical University.  
-   [https://doi.org/10.5281/zenodo.13763953](https://doi.org/10.5281/zenodo.13763953)
+The repository now includes the training data files required for graph- and hypergraph-based experiments:
 
+- `all_graphs_with_labels-train.pt`  
+  Training set used for graph-based learning workflows.
+
+- `all_hypergraphs_with_labels-train.pkl`  
+  Training set used for hypergraph-based learning workflows.
+
+These files were added to improve the reproducibility of the published workflow and to support users who want to inspect or extend model training.
+
+## 3. Generated outputs for interpretation
+
+- `prediction_outputs.tsv`  
+  Example model prediction outputs.
+
+- `attention_weights.tsv`  
+  Attention-weight results for detailed inspection of model emphasis patterns.
+
+- `attention_averages.tsv`  
+  Averaged attention summaries for simplified interpretation.
+
+- `calculated_attention_weights.tsv`  
+  Processed attention-weight results used to quantify herb-herb interaction patterns within formulae.
+
+## 4. Related data resource
+
+For the broader biomedical knowledge resource that supports this repository, please refer to the public **Traditional Chinese Medicine Multidimensional Knowledge Graph (TCM-MKG)** dataset:
+
+Zeng, J., & Jia, X. (2024). *Traditional Chinese Medicine Multidimensional Knowledge Graph (TCM-MKG) (V1.0)* [Data set]. China Pharmaceutical University.  
+[https://doi.org/10.5281/zenodo.13763953](https://doi.org/10.5281/zenodo.13763953)
