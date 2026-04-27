@@ -8,7 +8,60 @@
 
 ## Overview
 
-**GraphAI-for-TCM** is a graph artificial intelligence framework for studying compatibility mechanisms in Traditional Chinese Medicine (TCM) formulae. The repository is designed as the model and workflow companion to the **Traditional Chinese Medicine Multidimensional Knowledge Graph (TCM-MKG)** resource and supports graph construction, model inference, mechanism interpretation, and reproducible training experiments.
+**GraphAI-for-TCM** is an interpretable graph artificial intelligence framework for studying compatibility mechanisms in Traditional Chinese Medicine (TCM) formulae. This repository now serves two roles:
+
+1. **The open research codebase** for graph construction, model inference, interpretation, and reproducible experiments.
+2. **The backend model companion** to the public **TCMXAI** online platform, where users can directly explore the data resource and run the pretrained model without local setup.
+
+Online platform: [https://www.tcmxai.com/](https://www.tcmxai.com/)
+
+If you want to try the system immediately, the website is the recommended entry point. If you want to inspect the data assets, reproduce the workflow, or extend the model, use this GitHub repository.
+
+---
+
+## Use the Online Platform
+
+**TCMXAI (Traditional Chinese Medicine Explainable AI Platform)** makes the released resource directly usable in the browser for research and knowledge organization.
+
+### Core capabilities
+
+- **Browse the full TCM-MKG resource online**  
+  The platform organizes the resource into **seven foundational data modules** and supports unified table search across the released knowledge base.
+
+- **Run cross-table retrieval and association analysis**  
+  Users can search structured records, combine logically connected tables, inspect linked entities, and export query results as CSV.
+
+- **Visualize the overall knowledge graph**  
+  The home page exposes a graph view of module-table-entity relationships with interactive layout controls, zooming, and image export.
+
+- **Generate knowledge graphs from query results**  
+  The data module can turn retrieved records into graph views for downstream exploration of connected entities and relations.
+
+- **Predict formula-level mechanisms directly in the browser**  
+  The GraphAI-for-TCM module supports model-ready combinations of Chinese herbal pieces and returns **five-dimensional mechanism prediction scores**.
+
+- **Import formula composition from Chinese patent medicines**  
+  Instead of entering every herb manually, users can search a supported Chinese patent medicine and import its formula composition into the model workflow.
+
+- **Interpret herb compatibility with attention outputs**  
+  The platform returns **compatibility relation tables, attention heatmaps, and compatibility graphs** to support explanation and hypothesis generation.
+
+- **Export research outputs**  
+  Prediction tables can be exported as CSV, and graph or heatmap visualizations can be exported as PNG.
+
+### Practical entry points
+
+- **Knowledge resource and graph exploration:** [https://www.tcmxai.com/](https://www.tcmxai.com/)
+- **Structured data search and graph generation:** [https://www.tcmxai.com/modules.html](https://www.tcmxai.com/modules.html)
+- **Online GraphAI-for-TCM prediction module:** [https://www.tcmxai.com/model.html](https://www.tcmxai.com/model.html)
+
+### What the online model does
+
+The deployed GraphAI-for-TCM model represents a formula as a **Chinese-herbal-piece plus medicinal-property semantic graph**. Herbal-piece nodes are described by a 91-dimensional feature set spanning origin, medicinal property, compatibility, efficacy, and dosage information. Virtual nodes for **nature, flavor, and meridian tropism** are dynamically constructed from neighboring herb attributes to capture overall formula-level medicinal-property structure. The pretrained graph attention network then predicts five mechanism-related efficacy dimensions and uses attention weights to explain herb-herb compatibility patterns.
+
+### Research-use note
+
+The online module is intended for **research interpretation and hypothesis generation**. Its outputs do **not** constitute clinical diagnosis, prescription recommendation, or medication advice.
 
 This project is associated with the following article:
 
@@ -73,6 +126,8 @@ Detailed data descriptions are provided in `Data/Readme.md` and `Data/Data_dicti
 ---
 
 ## Quick Start
+
+For users who mainly want to explore the resource or run the pretrained model, start with the online platform above. The local environment below is mainly for reproducibility, offline analysis, and notebook-based extension.
 
 ### 0. Create the environment
 
