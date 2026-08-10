@@ -1,3 +1,5 @@
+
+
 # GraphAI-for-TCM
 
 **Author**: Zeng Jingqi  
@@ -153,9 +155,10 @@ conda env create -f environment.yml
 conda activate graphai-for-tcm
 ```
 
-Then launch Jupyter from the repository root and open the notebooks in the `Python` directory:
+Then launch Jupyter from the `Python` directory (so that repository-relative paths like `../Data/` resolve correctly) and open the notebooks:
 
 ```bash
+cd Python
 jupyter notebook
 ```
 
